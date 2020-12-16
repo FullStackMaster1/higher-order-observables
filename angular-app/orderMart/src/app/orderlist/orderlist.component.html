@@ -1,0 +1,18 @@
+<mat-autocomplete #auto="matAutocomplete">
+  <mat-option *ngFor="let option of options" [value]="option">
+    {{option}}
+  </mat-option>
+</mat-autocomplete>
+
+
+  <mat-list role="list" style="width: 50%;">
+    <mat-list-item role="listitem" *ngFor="let order of orders">
+      <span style="padding-right:50px">
+        {{ order.name }}</span>
+      <span>
+        {{ order.price|currency }}</span>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+
+
