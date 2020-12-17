@@ -19,7 +19,7 @@ export class OrderService {
     }
   }
 
-  remove(id: string) {
+  removeOrder(id: string) {
     return this.httpClient.delete(`http://localhost:3000/orders/${id}`).pipe(
       delay(this.getRandomDelay()),
       tap((_) => console.log(`Order Deleted: ${id}`))

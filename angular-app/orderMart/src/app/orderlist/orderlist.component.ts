@@ -36,7 +36,7 @@ export class OrderlistComponent implements OnInit, OnDestroy {
     this.removeSubscription = this.remove
       .pipe(
         tap((id) => console.log(`Delete Order: ${id}`)),
-        mergeMap((id) => this.orderService.remove(id)),
+        mergeMap((id) => this.orderService.removeOrder(id)),
         concatMap((_) => this.orderService.fetchOrders())
       )
       .subscribe(this.setOrders.bind(this));
