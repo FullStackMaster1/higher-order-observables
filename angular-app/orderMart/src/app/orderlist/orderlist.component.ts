@@ -1,12 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import {
-  concatMap,
-  mergeMap,
-  switchMap,
-  tap,
-  withLatestFrom,
-} from 'rxjs/operators';
+import { concatMap, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { Order } from '../models/Order';
 import { OrderService } from '../services/order.service';
 
