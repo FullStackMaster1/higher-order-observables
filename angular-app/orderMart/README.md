@@ -18,10 +18,15 @@ Here we are using `json-server`  in order to create REST api.
 
 ## Getting started with the source code
 
+![](https://i.imgur.com/7YRRUDv.png)
+
 - Run below code to clone the repo: 
 
 `git clone https://github.com/FullStackMaster1/higher-order-observables.git`
 
+- Go to angular app:
+  - `cd angular-app/orderMart`
+  
 - Start server 
   `npm run server` 
 
