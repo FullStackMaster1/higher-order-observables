@@ -4,6 +4,18 @@ This project has submit order and order list components.
 And also it has order service. 
 Here we are using `json-server`  in order to create REST api.
 
+
+## Higher Order Mapping Operators in-Action
+
+- Submit Order
+  - `exhaustMap` & `concatMap`
+
+- Search Order
+  - `switchMap`
+
+- Delete Order
+  - `mergeMap`
+
 ## Getting started with the source code
 
 - Run below code to clone the repo: 
