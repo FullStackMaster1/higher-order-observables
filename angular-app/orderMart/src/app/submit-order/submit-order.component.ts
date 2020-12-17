@@ -1,7 +1,7 @@
 import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Subject, Subscription } from 'rxjs';
+import { Subject } from 'rxjs';
 import { catchError, exhaustMap } from 'rxjs/operators';
 import { OrderService } from '../services/order.service';
 
