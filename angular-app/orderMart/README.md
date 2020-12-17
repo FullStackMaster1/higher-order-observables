@@ -1,27 +1,36 @@
 # OrderMart
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+This project has submit order and order list components. 
+And also it has order service. 
+Here we are using `json-server`  in order to create REST api.
 
-## Development server
+## Getting started with the source code
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Run below code to clone the repo: 
 
-## Code scaffolding
+`git clone https://github.com/FullStackMaster1/higher-order-observables.git`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Start server 
+  `npm run server` 
 
-## Build
+- Serve Client
+  `npm start`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Navigate to URL: http://localhost:4200/submit 
 
-## Running unit tests
+### Submit Order
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Before submitting order:
+![](https://i.imgur.com/9BY65iO.png)
 
-## Running end-to-end tests
+- Add order detail:
+![](https://i.imgur.com/Yz1jpgJ.png)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+- After submitting order
+![](https://i.imgur.com/qedrtjI.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+### Order List
+
+![](https://i.imgur.com/zFtQ5UU.png)
