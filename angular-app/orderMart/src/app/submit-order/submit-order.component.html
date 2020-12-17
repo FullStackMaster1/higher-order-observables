@@ -1,0 +1,27 @@
+<form #orderForm="ngForm" class="example-container" (ngSubmit)="_submitOrder.next(orderForm)" novalidate>
+  <h3>Submit your order here</h3>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+
+      <input name="name" matInput placeholder="Placeholder" ngModel required #name="ngModel">
+
+      <mat-icon matSuffix>check</mat-icon>
+      <mat-hint>Enter Item to buy</mat-hint>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>Price</mat-label>
+
+      <input name="price" type="number" matInput placeholder="Placeholder" ngModel required #price="ngModel">
+
+      <mat-icon matSuffix>check</mat-icon>
+      <mat-hint>Enter price</mat-hint>
+    </mat-form-field>
+  </p>
+  <p>
+    <button mat-raised-button color="primary" [disabled]="!orderForm.valid">Submit</button>
+  </p>
+</form>
