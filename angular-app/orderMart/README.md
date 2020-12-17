@@ -19,7 +19,7 @@ Here we are using `json-server`  in order to create REST api.
 - Navigate to URL: http://localhost:4200/submit 
 
 ### Submit Order
-
+Navigate to URL: http://localhost:4200/submit
 - Before submitting order:
 ![](https://i.imgur.com/9BY65iO.png)
 
@@ -32,5 +32,5 @@ Here we are using `json-server`  in order to create REST api.
 
 
 ### Order List
-
+Navigate to URL: http://localhost:4200/list
 ![](https://i.imgur.com/zFtQ5UU.png)
