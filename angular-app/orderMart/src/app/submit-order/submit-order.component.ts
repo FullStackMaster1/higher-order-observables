@@ -40,7 +40,7 @@ export class SubmitOrderComponent implements OnDestroy {
     this.snackBar.open(
       result.message
         ? result.message
-        : `Thanks! Order Submitted successfully. ${result.id}`,
+        : `Thanks! Order Submitted successfully. Order Id: ${result}`,
       'ok',
       { duration: 3000, verticalPosition: 'top', horizontalPosition: 'left' }
     );
