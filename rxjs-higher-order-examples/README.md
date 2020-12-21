@@ -1,8 +1,8 @@
 # Higher Order Observable Course From Fullstack Master
 
 This project has all the solutions for the exercises done in the course "Higher Order Observable". 
-It has one project 'rxjs-higher-order-examples' which has all RxJS exercises.
-It has another angular-app 'orderMart' for demo angular project where you will learn how to use higher order observables. 
+It has one project '**rxjs-higher-order-examples**' which has all RxJS exercises.
+It has another angular-app '**orderMart**' for demo angular project where you will learn how to use higher order observables. 
 
 ## Getting started
 Repository URL: https://github.com/FullStackMaster1/higher-order-observables 
