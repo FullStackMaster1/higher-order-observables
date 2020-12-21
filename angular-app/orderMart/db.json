@@ -59,6 +59,18 @@
       "price": 11,
       "id": "12eaa20d-331b-48e9-b133-201e89ad3e9d",
       "createdDate": "2020-12-21T21:57:20.705Z"
+    },
+    {
+      "name": "OnePlus 8 Pro",
+      "price": 400,
+      "id": "e862c0cd-d3cf-490b-9b14-153d3ccb34d6",
+      "createdDate": "2020-12-21T21:58:10.385Z"
+    },
+    {
+      "name": "Samsung Note",
+      "price": 30,
+      "id": "0a4efb43-8ac0-4961-8841-010315b74fc5",
+      "createdDate": "2020-12-21T21:58:57.427Z"
     }
   ],
   "shipping": [
@@ -204,6 +216,14 @@
     },
     {
       "id": "12eaa20d-331b-48e9-b133-201e89ad3e9d",
+      "status": "Shipping Soon"
+    },
+    {
+      "id": "e862c0cd-d3cf-490b-9b14-153d3ccb34d6",
+      "status": "Shipping Soon"
+    },
+    {
+      "id": "0a4efb43-8ac0-4961-8841-010315b74fc5",
       "status": "Shipping Soon"
     }
   ]
