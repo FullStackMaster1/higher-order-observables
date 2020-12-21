@@ -3,8 +3,6 @@
 This project has submit order and order list components. 
 And also it has order service. 
 Here we are using `json-server`  in order to create REST api.
-
-
 ## Higher Order Mapping Operators in-Action
 
 - Submit Order
@@ -18,7 +16,7 @@ Here we are using `json-server`  in order to create REST api.
 
 ## Getting started with the source code
 
-https://github.com/FullStackMaster1/higher-order-observables 
+Repository URL: https://github.com/FullStackMaster1/higher-order-observables 
 
 ![](https://i.imgur.com/tQOodiv.png)
 
