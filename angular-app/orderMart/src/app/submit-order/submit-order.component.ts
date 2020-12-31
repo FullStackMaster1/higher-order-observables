@@ -20,7 +20,7 @@ export class SubmitOrderComponent implements OnDestroy, OnInit {
     private snackBar: MatSnackBar
   ) {}
 
-  // Challenge 3: Tips: Use  this.orderService.submitOrder(orderForm.value) function to submit order
+  // Challenge 1: Tips: Use  this.orderService.submitOrder(orderForm.value) function to submit order
   ngOnInit(): void {
     this._submitSubscription = this._submitOrder
       .pipe(catchError((e) => e))

@@ -58,7 +58,7 @@ export class OrderService {
     );
   }
 
-  // Challenge 4: Use this.addShipping(o) to add shiping info.
+  // Challenge 2: Use this.addShipping(o) to add shiping info.
   submitOrder(order: any) {
     return this.addOrder(order)
       .pipe

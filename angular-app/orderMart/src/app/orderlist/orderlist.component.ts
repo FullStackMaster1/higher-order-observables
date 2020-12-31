@@ -20,7 +20,7 @@ export class OrderlistComponent implements OnInit, OnDestroy {
 
   constructor(private orderService: OrderService) {}
 
-  // Challenge 1: Tips: Use this.orderService.searchOrder((s.target as any).value) function to search order.
+  // Challenge 3: Tips: Use this.orderService.searchOrder((s.target as any).value) function to search order.
   ngOnInit(): void {
     this.searchResultSubscription = this.search
       .pipe()
@@ -30,7 +30,7 @@ export class OrderlistComponent implements OnInit, OnDestroy {
       .fetchOrders()
       .subscribe(this.setOrders.bind(this));
 
-    // Challenge 2: Use : this.orderService.removeOrder(id) for delete
+    // Challenge 4: Use : this.orderService.removeOrder(id) for delete
     this.removeSubscription = this.remove
       .pipe(tap((id) => console.log(`Delete Order: ${id}`)))
       .subscribe(this.setOrders.bind(this));
