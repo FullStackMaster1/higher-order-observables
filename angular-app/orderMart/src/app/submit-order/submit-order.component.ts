@@ -23,7 +23,19 @@ export class SubmitOrderComponent implements OnDestroy, OnInit {
   // Challenge 1: Tips: Use  this.orderService.submitOrder(orderForm.value) function to submit order
   ngOnInit(): void {
     this._submitSubscription = this._submitOrder
-      .pipe(catchError((e) => e))
+      .pipe(
+        /**
+
+         * concatMap-> submitted-1, submitted-2
+         * mergeMap-> submitted-1, submitted-2
+         * switchMap-> submitted-1, submitted-2
+         * exhaustMap-> submitted-1, submitted-2[X], submitted-3[X]
+         */
+
+        exhaustMap((order) => this.orderService.submitOrder(order.value)),
+
+        catchError((e) => e)
+      )
       .subscribe((result) => {
         this.resetForm();
         this.showNotifiction(result);
