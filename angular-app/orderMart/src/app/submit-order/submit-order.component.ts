@@ -1,4 +1,4 @@
-import { Component, OnDestroy, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subject } from 'rxjs';
@@ -10,7 +10,7 @@ import { OrderService } from '../services/order.service';
   templateUrl: './submit-order.component.html',
   styleUrls: ['./submit-order.component.css'],
 })
-export class SubmitOrderComponent implements OnDestroy {
+export class SubmitOrderComponent implements OnDestroy, OnInit {
   _submitOrder = new Subject<NgForm>();
   private _submitSubscription = null;
   @ViewChild('orderForm') orderForm: NgForm;
@@ -18,14 +18,12 @@ export class SubmitOrderComponent implements OnDestroy {
   constructor(
     private orderService: OrderService,
     private snackBar: MatSnackBar
-  ) {
+  ) {}
+
+  // Challenge 3: Tips: Use  this.orderService.submitOrder(orderForm.value) function to submit order
+  ngOnInit(): void {
     this._submitSubscription = this._submitOrder
-      .pipe(
-        exhaustMap((orderForm) =>
-          this.orderService.submitOrder(orderForm.value)
-        ),
-        catchError((e) => e)
-      )
+      .pipe(catchError((e) => e))
       .subscribe((result) => {
         this.resetForm();
         this.showNotifiction(result);

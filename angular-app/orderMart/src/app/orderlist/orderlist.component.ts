@@ -20,25 +20,19 @@ export class OrderlistComponent implements OnInit, OnDestroy {
 
   constructor(private orderService: OrderService) {}
 
+  // Challenge 1: Tips: Use this.orderService.searchOrder((s.target as any).value) function to search order.
   ngOnInit(): void {
     this.searchResultSubscription = this.search
-      .pipe(
-        switchMap((s: InputEvent) =>
-          this.orderService.searchOrder((s.target as any).value)
-        )
-      )
+      .pipe()
       .subscribe(this.setOrders.bind(this));
 
     this.orderSubscription = this.orderService
       .fetchOrders()
       .subscribe(this.setOrders.bind(this));
 
+    // Challenge 2: Use : this.orderService.removeOrder(id) for delete
     this.removeSubscription = this.remove
-      .pipe(
-        tap((id) => console.log(`Delete Order: ${id}`)),
-        mergeMap((id) => this.orderService.removeOrder(id)),
-        concatMap((_) => this.orderService.fetchOrders())
-      )
+      .pipe(tap((id) => console.log(`Delete Order: ${id}`)))
       .subscribe(this.setOrders.bind(this));
   }
 

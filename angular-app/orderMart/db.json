@@ -31,12 +31,6 @@
       "createdDate": "2020-12-17T21:26:28.549Z"
     },
     {
-      "name": "afdvcxzvcv",
-      "price": 34,
-      "id": "637e4c05-f9bb-4ff6-912c-8c105f68abba",
-      "createdDate": "2020-12-17T21:26:34.221Z"
-    },
-    {
       "name": "Milk",
       "price": 23,
       "id": "4d281f1c-fbe3-499f-97d4-6716f4459866",
@@ -71,6 +65,12 @@
       "price": 30,
       "id": "0a4efb43-8ac0-4961-8841-010315b74fc5",
       "createdDate": "2020-12-21T21:58:57.427Z"
+    },
+    {
+      "name": "Book",
+      "price": 20,
+      "id": "16655dfe-6b9c-43ee-98ad-33bc3ab0db0b",
+      "createdDate": "2020-12-31T12:48:21.965Z"
     }
   ],
   "shipping": [
@@ -224,6 +224,10 @@
     },
     {
       "id": "0a4efb43-8ac0-4961-8841-010315b74fc5",
+      "status": "Shipping Soon"
+    },
+    {
+      "id": "16655dfe-6b9c-43ee-98ad-33bc3ab0db0b",
       "status": "Shipping Soon"
     }
   ]
