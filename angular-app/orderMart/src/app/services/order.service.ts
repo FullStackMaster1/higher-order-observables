@@ -13,7 +13,10 @@ export class OrderService {
     if (s) {
       return this.httpClient
         .get(`http://localhost:3000/orders?name_like=${s.trim()}`)
-        .pipe(tap((_) => console.log(`Searching for: ${s}`)));
+        .pipe(
+          delay(this.getRandomDelay()),
+          tap((_) => console.log(`Searching for: ${s}`))
+        );
     } else {
       return this.httpClient.get(`http://localhost:3000/orders`);
     }

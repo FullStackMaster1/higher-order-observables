@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { concatMap, mergeMap, switchMap, tap } from 'rxjs/operators';
+import { concatMap, exhaustMap, mergeMap, switchMap, tap } from 'rxjs/operators';
 import { Order } from '../models/Order';
 import { OrderService } from '../services/order.service';
 
@@ -23,7 +23,12 @@ export class OrderlistComponent implements OnInit, OnDestroy {
   // Challenge 3: Tips: Use this.orderService.searchOrder((s.target as any).value) function to search order.
   ngOnInit(): void {
     this.searchResultSubscription = this.search
-      .pipe()
+      .pipe(
+      ///  concatMap((s) => this.orderService.searchOrder((s as any).target.value)),
+      //  mergeMap((s) => this.orderService.searchOrder((s as any).target.value)),
+      //  exhaustMap((s) => this.orderService.searchOrder((s as any).target.value)),
+        switchMap((s) => this.orderService.searchOrder((s as any).target.value))
+      )
       .subscribe(this.setOrders.bind(this));
 
     this.orderSubscription = this.orderService
