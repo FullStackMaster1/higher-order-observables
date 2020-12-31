@@ -60,11 +60,17 @@ export class OrderService {
 
   // Challenge 2: Use this.addShipping(o) to add shiping info.
   submitOrder(order: any) {
-    return this.addOrder(order)
-      .pipe
+    return this.addOrder(order).pipe(
+      /**
 
-      // map((x) => x.id)
-      ();
+         * concatMap-> submitted-1, submitted-2
+         * mergeMap-> submitted-1, submitted-2
+         * switchMap-> submitted-1, submitted-2
+         * exhaustMap-> submitted-1, submitted-2[X], submitted-3[X]
+    */
+      concatMap((o) => this.addShipping(o)),
+      map((x) => x.id)
+    );
   }
 
   fetchOrderIds() {

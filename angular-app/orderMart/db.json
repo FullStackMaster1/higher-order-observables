@@ -77,6 +77,12 @@
       "price": 10,
       "id": "94b1c592-9007-4fa2-ade7-5b2eb43297ba",
       "createdDate": "2020-12-31T19:35:55.139Z"
+    },
+    {
+      "name": "Desk",
+      "price": 400,
+      "id": "45d3b601-01e7-4dcd-be38-75e1533468eb",
+      "createdDate": "2020-12-31T19:56:10.181Z"
     }
   ],
   "shipping": [
@@ -234,6 +240,10 @@
     },
     {
       "id": "16655dfe-6b9c-43ee-98ad-33bc3ab0db0b",
+      "status": "Shipping Soon"
+    },
+    {
+      "id": "45d3b601-01e7-4dcd-be38-75e1533468eb",
       "status": "Shipping Soon"
     }
   ]
