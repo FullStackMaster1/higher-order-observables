@@ -1,4 +1,4 @@
-# Mastering Higher Order Observable Course From Fullstack Master
+# Mastering Higher Order RxJS Observable Course From Fullstack Master
 
 This project has all the solutions for the exercises done in the course "Higher Order Observable". 
 It has one project '**rxjs-higher-order-examples**' which has all RxJS exercises.
